@@ -8,6 +8,6 @@ Uses Handlebars and Materializecss for front-end
 
 Data persists in JSON files in json folder
 
-Usage:
-npm install 
+Usage: <br />
+npm install <br />
 npm start
