@@ -9,5 +9,5 @@ Uses Handlebars and Materializecss for front-end
 Data persists in JSON files in json folder
 
 Usage:
-npm install
+npm install 
 npm start
