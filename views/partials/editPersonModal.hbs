@@ -1,0 +1,41 @@
+<!-- Edit Person Modal -->
+  <div id="editPersonModal" class="modal">
+    <div class="modal-content">
+      <h4>Edit person</h4>
+
+      <div class="row">
+        <form class="col s12">
+          <div class="row modal-form-row">
+            <div class="input-field col s12">
+              <input id="form_edit_person_name" type="text" class="validate">
+              <label for="form_edit_person_name" class="active">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="form_edit_person_email" type="text" class="validate">
+              <label for="form_edit_person_email" class="active">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="form_edit_person_phone" type="text" class="validate">
+              <label for="form_edit_person_phone" class="active">Phone</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <select id="form_edit_person_organisation" class="validate">
+                <option class="unselectable" disabled>Choose organisation</option>
+              </select>
+              <label for="form_edit_person_organisation">Organisation</label>
+            </div>
+          </div>
+          <input id="form_edit_person_id" type="hidden">
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="editPersonSubmit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div>
+  </div>

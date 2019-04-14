@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../public/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../public/js/main.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Address Book</a>
+      </div>
+    </nav>
+
+    <!-- Split page into 3 columns -->
+    <div id="headerRow" class="row">
+      <div class="col s4 valign-wrapper">
+        <h5 class="centre-align">Organisations</h5>
+      </div>
+
+      <div class="col s4 valign-wrapper">
+        <h5 class="centre-align">People</h5>
+      </div>
+
+      <div class="col s4 valign-wrapper">
+        <h5 class="centre-align">Person</h5>
+      </div>
+    </div>
+
+    <div id="listRow" class="row">
+      <div id="organisationColumn" class="col s4">
+        <div id="organisationHolder" class="collection" data-simplebar>
+          <li id="allOrganisations" class="collection-item active" data-id="all">
+            <p id="organisationName" class="primary-content">All</p>
+          </li>
+        </div>
+      </div>
+
+      <div id="peopleColumn" class="col s4">
+        <div id="peopleHolder" class="collection" data-simplebar></div>
+      </div>
+
+      <div id="personColumn" class="col s4 valign-wrapper">
+        <div id="personHolder" class="center-align">
+          <img src="../public/res/person.png" class="circle">
+
+          <p id="personName"></p>
+          <p id="personEmail"><i class="tiny material-icons">email</i></p>
+          <p id="personPhone"><i class="tiny material-icons">phone</i></p>
+
+          <div id="personOrganisationHolder" class="center-align">
+            <h5>Organisation Details</h5>
+            <p id="personOrganisationName"></p>
+            <p id="personOrganisationEmail"><i class="tiny material-icons">email</i></p>
+            <p id="personOrganisationPhone"><i class="tiny material-icons">phone</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating green tooltipped" id="addPersonBtn" data-position="left" data-tooltip="Add person"><i class="material-icons">person_add</i></a></li>
+        <li><a class="btn-floating blue tooltipped" id="addOrganisationBtn" data-position="left" data-tooltip="Add organisation"><i class="material-icons">group_add</i></a></li>
+      </ul>
+    </div>
+
+    <!-- Include all the modals -->
+    {{>addOrganisationModal}}
+    {{>addPersonModal}}
+    {{>editOrganisationModal}}
+    {{>editPersonModal}}
+
+    <!-- Quick way of loading the data -->
+    <script type="text/javascript">loadData(`{{{organisations}}}`,`{{{people}}}`);</script>
+  </body>
+</html>
