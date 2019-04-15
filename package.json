@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simple Address Book",
   "engines": {
-    "node": "8.11.3",
-    "npm": "6.1.0"
+    "node": "6.11.4",
+    "npm": "3.10.10"
   },
   "scripts": {
     "start": "node app.js"
